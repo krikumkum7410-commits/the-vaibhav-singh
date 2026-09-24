@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vaibhav Singh | Personal Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #070b14;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 18px 8%;
+      background: rgba(7, 11, 20, 0.92);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid #1d2a3d;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #55d9ff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #55d9ff;
+    }
+
+    section {
+      padding: 90px 8%;
+      min-height: 70vh;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding-top: 120px;
+    }
+
+    .hero-text {
+      max-width: 650px;
+    }
+
+    .small {
+      color: #55d9ff;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 9vw, 90px);
+      line-height: 1;
+      margin: 15px 0;
+    }
+
+    h1 span {
+      color: #55d9ff;
+    }
+
+    .hero p {
+      color: #b8c1cf;
+      font-size: 18px;
+      max-width: 600px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 22px;
+      background: #55d9ff;
+      color: #07101b;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(85, 217, 255, 0.4);
+    }
+
+    .photo {
+      width: 280px;
+      height: 340px;
+      border: 2px solid #55d9ff;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7f8a9b;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 0 35px rgba(85, 217, 255, 0.15);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .section-title {
+      font-size: 38px;
+      margin-bottom: 35px;
+    }
+
+    .section-title span {
+      color: #55d9ff;
+    }
+
+    .about-box {
+      background: #0d1421;
+      border: 1px solid #1d2a3d;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 900px;
+    }
+
+    .about-box p {
+      color: #c5cedb;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #0d1421;
+      border: 1px solid #1d2a3d;
+      border-radius: 18px;
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #55d9ff;
+    }
+
+    .card h3 {
+      color: #55d9ff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #aeb8c7;
+    }
+
+    .timeline {
+      border-left: 2px solid #55d9ff;
+      padding-left: 25px;
+    }
+
+    .timeline div {
+      margin-bottom: 25px;
+    }
+
+    .timeline strong {
+      color: #55d9ff;
+    }
+
+    .music {
+      text-align: center;
+      background: #0b1220;
+    }
+
+    .music button {
+      padding: 13px 25px;
+      border: none;
+      border-radius: 30px;
+      background: #55d9ff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #1d2a3d;
+      color: #8793a5;
+    }
+
+    @media (max-width: 750px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero p {
+        margin: auto;
+      }
+
+      .photo {
+        width: 240px;
+        height: 290px;
+      }
+
+      section {
+        padding: 75px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">VS.</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#vision">Vision</a>
+      <a href="#journey">Journey</a>
+      <a href="#projects">Projects</a>
+      <a href="#videos">Videos</a>
+    </nav>
+  </header>
+
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+      <div class="small">Welcome to my world</div>
+
+      <h1>Vaibhav <span>Singh</span></h1>
+
+      <p>
+        I am Vaibhav Singh. I am learning, exploring new ideas
+        and building my skills step by step.
+        This website is a small part of my journey.
+      </p>
+
+      <a class="button" href="#about">Explore My Journey ↓</a>
+    </div>
+
+    <div class="photo">
+      <!-- Later put your photo here -->
+      Your Photo Here
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <h2 class="section-title">About <span>Me</span></h2>
+
+    <div class="about-box">
+
+      <p>
+        Hello! I am Vaibhav Singh.
+
+        I believe that learning is a continuous journey.
+        I am interested in technology, creativity and building
+        new things.
+
+        Right now I am exploring different skills and learning
+        how websites and digital projects are created.
+
+        This portfolio will grow with me as I learn more.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- VISION -->
+  <section id="vision">
+
+    <h2 class="section-title">My <span>Vision</span></h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Learn</h3>
+        <p>
+          I want to continuously learn new skills and understand
+          how technology works.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Build</h3>
+        <p>
+          I want to turn my ideas into real projects and websites.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Grow</h3>
+        <p>
+          Over the next few years, I want to improve myself,
+          gain experience and discover my own path.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Future</h3>
+        <p>
+          My future goals will become clearer as I explore
+          different fields and opportunities.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- JOURNEY -->
+  <section id="journey">
+
+    <h2 class="section-title">My <span>Journey</span></h2>
+
+    <div class="timeline">
+
+      <div>
+        <strong>2026</strong>
+        <p>Starting my digital learning journey.</p>
+      </div>
+
+      <div>
+        <strong>2027</strong>
+        <p>Building more skills and projects.</p>
+      </div>
+
+      <div>
+        <strong>2028+</strong>
+        <p>Exploring bigger opportunities and new goals.</p>
+      </div>
+
+      <div>
+        <strong>Future</strong>
+        <p>Turning my ideas into something meaningful.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS -->
+  <section id="projects">
+
+    <h2 class="section-title">My <span>Projects</span></h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>
+          My first personal website where I can share my journey,
+          projects and future goals.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Coming Soon</h3>
+        <p>
+          New projects will be added here as I build them.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- VIDEOS -->
+  <section id="videos">
+
+    <h2 class="section-title">My <span>Videos</span></h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Video 01</h3>
+        <p>
+          My first short video will be added here.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Video 02</h3>
+        <p>
+          More videos coming soon.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MUSIC -->
+  <section class="music">
+
+    <h2 class="section-title">My <span>Music</span></h2>
+
+    <p>Listen while exploring my website 🎵</p>
+
+    <br>
+
+    <audio id="myMusic" loop>
+      <!-- Later add your music file here -->
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="toggleMusic()" id="musicButton">
+      ▶ Play Music
+    </button>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Vaibhav Singh. Built with curiosity & code.</p>
+  </footer>
+
+
+  <script>
+
+    const music = document.getElementById("myMusic");
+    const button = document.getElementById("musicButton");
+
+    function toggleMusic() {
+
+      if (music.paused) {
+        music.play();
+        button.innerHTML = "⏸ Pause Music";
+      } else {
+        music.pause();
+        button.innerHTML = "▶ Play Music";
+      }
+
+    }
+
+  </script>
+
+</body>
+      </html>
